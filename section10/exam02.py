@@ -22,3 +22,17 @@ if correct1 and correct2 and correct3:
   print(' 올바른 형식입니다.')
 else:
   print('올바른 형식이 아닙니다.')
+
+
+# 해설
+n=input('사업자등록번호를 입력하세요 (예: 123-45-67890)>>>')
+
+c1=(n.find('-')==3)
+c2=(n.find('-',4)==6)
+c3=(len(n)==12)
+c4=(n.replace('-','').isdecimal)
+
+if c1 and c2 and c3 and c4:
+  print('올바른 형식입니다.')
+else:
+  print('올바른 형식이 아닙니다.')
